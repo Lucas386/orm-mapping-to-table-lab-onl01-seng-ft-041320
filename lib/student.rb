@@ -15,8 +15,8 @@ class Student
   def self.create_table
     sql = <<-SQL
     create table students(
-      id integer primary key,
-      name text,
+      id integer primary key, 
+      name text, 
       grade text);
     SQL
     DB[:conn].execute(sql)
@@ -24,7 +24,7 @@ class Student
 
   def self.drop_table
     sql = <<-SQL
-    delete table students;
+    drop table students;
     SQL
     DB[:conn].execute(sql)
   end
